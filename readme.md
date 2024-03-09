@@ -12,8 +12,7 @@
 | /feedback/[action]       | Change the feedback level | action: String one of the following: off, pb, exec, pb+exec |
 
 ## x32
-| Command | Description | Arguments |
-|---------|-------------|-----------|
-
-| /config/[type]/[target] | Link to adjacent with each other | type: String one of the following: chlink, auxlink, fxlink, buslink, mtxlink. Target: Integer
-| /config/mute/[1..6] | Mute groups | group: Integer between 1 and 6. mute: Boolean |
+| Command                 | Description                      | Arguments                                                                                     |
+|-------------------------|----------------------------------|-----------------------------------------------------------------------------------------------|
+| /config/[type]/[target] | Link to adjacent with each other | type: String one of the following: chlink, auxlink, fxlink, buslink, mtxlink. Target: Integer |
+| /config/mute/[1..6]     | Mute groups                      | group: Integer between 1 and 6. mute: Boolean                                                 |
