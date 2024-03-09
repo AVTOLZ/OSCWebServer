@@ -3,15 +3,13 @@ package nl.avtolz.plugins
 import io.ktor.server.application.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
-import nl.avtolz.quickq.routing.feedbackRouting
-import nl.avtolz.quickq.routing.playbackRouting
-import nl.avtolz.quickq.routing.tenSceneRouting
+import nl.avtolz.quickq.routing.quickqRouting
+import nl.avtolz.x32.routing.x32Routing
 
 fun Application.configureRouting() {
     routing {
-        playbackRouting()
-        tenSceneRouting()
-        feedbackRouting()
+        quickqRouting()
+        x32Routing()
 
         get("/") {
             call.respondText("Hello World!")
