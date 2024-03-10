@@ -12,6 +12,10 @@ class TenScene {
         sender.send(OSCMessage(address, listOf(args)))
     }
 
+    /**
+     * Cue: Int in 1..10
+     * Zone: Int in 1..10
+     */
     fun update(cue: Int, zone: Int, activate: Boolean): Boolean {
         if (cue in 1..10 && zone in 1..10) {
             sendMessage("/10scene/$cue/$zone", if (activate) 1 else 0)

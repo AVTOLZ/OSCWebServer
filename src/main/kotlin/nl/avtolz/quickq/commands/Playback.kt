@@ -12,6 +12,10 @@ class Playback {
         sender.send(OSCMessage(address, listOf(args)))
     }
 
+    /**
+     * Playback: Int in 1..10
+     * Level: Int in 0..100
+     */
     fun setLevel(playback: Int, level: Int): Boolean {
         if (playback in 1..10 && level in 0..100) {
             sendMessage("/pb/$playback", level)
@@ -21,6 +25,10 @@ class Playback {
         }
     }
 
+    /**
+     * Playback: Int in 1..10
+     * Level: Int in 0..100
+     */
     fun flash(playback: Int, level: Int): Boolean {
         if (playback in 1..10) {
             sendMessage("/pb/$playback/flash", level)
@@ -30,6 +38,9 @@ class Playback {
         }
     }
 
+    /**
+     * Playback: Int in 1..10
+     */
     fun go(playback: Int): Boolean {
         if (playback in 1..10) {
             sendMessage("/pb/$playback/go", null)
@@ -39,6 +50,9 @@ class Playback {
         }
     }
 
+    /**
+     * Playback: Int in 1..10
+     */
     fun pause(playback: Int): Boolean {
         if (playback in 1..10) {
             sendMessage("/pb/$playback/pause", null)
@@ -48,6 +62,9 @@ class Playback {
         }
     }
 
+    /**
+     * Playback: Int in 1..10
+     */
     fun release(playback: Int): Boolean {
         if (playback in 1..10) {
             sendMessage("/pb/$playback/release", null)
